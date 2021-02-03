@@ -4,6 +4,10 @@ import Prismic from '@prismicio/client'
 import { Client } from '../prismic-configuration'
 
 export default function Post({ doc }) {
+  if(!doc) {
+    return <h1>Não encontrado</h1>
+  }
+  
   return (
     <h1>
         {doc.data.explicacao[0].text}
