@@ -1,80 +1,41 @@
 import React from 'react'
-import Prismic from '@prismicio/client'
 
-import { Client } from '../prismic-configuration'
+import search, { getAllSentences } from '../lib/search'
 
-export default function Post({ doc, related }) {
-  if(!doc) {
-    return (
-      <>
-      <h1>Não encontrado</h1>
-
-      {related && (
-          <div>
-            <h3>Você quis dizer:</h3>
-          {related.map((rel, index) => {
-            return <span>
-              <a href={rel.uid}>
-                  {rel.data.frase[0].text}
-              </a>
-            </span>
-          })}
-          </div>
-      )}
-      </>
-    )
-  }
-  
+function Post({ answer }) {
   return (
     <>
       <h1>
-          {doc.data.frase[0].text}
+          {answer?.frase[0].text}
       </h1>
       <div className="resposta">
-        {doc.data.resposta.data.titulo[0].text}
+        {answer?.resposta.data.titulo[0].text}
       </div>
       <p>
-      {doc.data.explicacao[0].text}
+      {answer?.explicacao[0].text}
       </p>
     </>
   );
 }
 
 export async function getStaticProps({params}) {
-  const client = Client()
-  let related = null
-  let doc = (await client.getByUID('frases', params.slug, {'fetchLinks': 'respostas.titulo'}))
+  const res = await search(params.slug);
 
-  if (!doc) {
-    doc = null
-    const query = (await client.query([
-      Prismic.Predicates.at('document.type', 'frases'),
-      Prismic.Predicates.fulltext('document', params.slug)
-    ]))
-    
-    related = query.results
+  if (!res.success) {
+    return {
+      notFound: true,
+    }
   }
   
   return {
     props: {
-      doc,
-      related
+      answer: res.searchResult
     },
   }
 }
 
 export async function getStaticPaths() {
-    const client = Client()
-
-    var options = {
-      fetch: 'frases.uid',
-      pageSize: 100
-    };
-
-    const allSentences = (await client.query(
-      Prismic.Predicates.at('document.type', 'frases'), 
-      options
-    ))
+    const allSentences = await getAllSentences();
 
     const paths = allSentences.results.map((sentence) => ({
         params: { slug: sentence.uid },
@@ -82,3 +43,5 @@ export async function getStaticPaths() {
 
     return { paths, fallback: true }
 }
+
+export default Post
