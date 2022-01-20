@@ -1,5 +1,6 @@
 import NProgress from "nprogress";
 import Router from "next/router";
+import Head from "next/head";
 
 import "../styles/nprogress.css";
 import "../styles/globals.css";
@@ -22,7 +23,14 @@ function Temcrase({ Component, pageProps }) {
     NProgress.done();
   });
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <title>temcrase.com</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default Temcrase;
