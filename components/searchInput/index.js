@@ -30,7 +30,7 @@ export default function SearchInput({ text = "" }) {
     <div className={styles.wrapper}>
       <Link href="/">
         <a>
-          <Image src="/logo.svg" width={48} height={48} />
+          <Image src="/logo.svg" width={48} height={48} alt="temcrase.com" />
         </a>
       </Link>
       <input

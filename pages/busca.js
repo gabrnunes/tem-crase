@@ -23,15 +23,16 @@ export default function Busca({ answer, related, error }) {
         {related && related[0] && (
           <>
             <h3>Você quis dizer:</h3>
-            {related.map((rel, index) => {
-              return (
-                <ul>
+
+            <ul>
+              {related.map((rel, index) => {
+                return (
                   <li key={`related-${index}`}>
                     <a href={rel.uid}>{rel.data.frase[0].text}</a>
                   </li>
-                </ul>
-              );
-            })}
+                );
+              })}
+            </ul>
           </>
         )}
       </Layout>
