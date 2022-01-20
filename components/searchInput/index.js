@@ -40,6 +40,7 @@ export default function SearchInput({ text = "" }) {
         type="search"
         className={styles.input}
         placeholder="volta as aulas"
+        autoFocus
       />
       <Button onClick={search}>tem crase?</Button>
     </div>

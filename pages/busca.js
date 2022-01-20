@@ -2,7 +2,8 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-import SearchInput from "../components/searchInput";
+import Layout from "../components/Layout";
+import SearchInput from "../components/SearchInput";
 import search from "../lib/search";
 
 export default function Busca({ answer, related, error }) {
@@ -11,7 +12,7 @@ export default function Busca({ answer, related, error }) {
 
   if (!answer) {
     return (
-      <>
+      <Layout justifyContent="flex-start">
         <Head>
           <title>Nenhum resultado encontrado - temcrase.com</title>
         </Head>
@@ -33,12 +34,12 @@ export default function Busca({ answer, related, error }) {
             })}
           </>
         )}
-      </>
+      </Layout>
     );
   }
 
   return (
-    <>
+    <Layout justifyContent="flex-start">
       <Head>
         <title>{answer?.frase[0].text} tem crase? - temcrase.com</title>
       </Head>
@@ -46,7 +47,7 @@ export default function Busca({ answer, related, error }) {
       <h1>{answer.frase[0].text}</h1>
       <div className="resposta">{answer.resposta.data.titulo[0].text}</div>
       <p>{answer.explicacao[0].text}</p>
-    </>
+    </Layout>
   );
 }
 

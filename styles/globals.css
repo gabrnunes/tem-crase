@@ -18,12 +18,12 @@
 
 :root {
   --color-bg: #ffffff;
-  --color-bg-dark: #fcfcfc;
+  --color-bg-dark: #f9f9f9;
   --color-primary: #000000;
   --color-primary-light: #2d2d2d;
   --color-border: #dddddd;
   --color-border-dark: #cccccc;
-  --color-links: #9d9d9d;
+  --color-link: #9d9d9d;
   --color-text: #4d4d4d;
   --color-yes: #60d464;
   --color-no: #f15b5b;

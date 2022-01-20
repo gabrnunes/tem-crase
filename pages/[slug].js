@@ -1,18 +1,24 @@
 import React from "react";
 import Head from "next/head";
 
+import Layout from "../components/Layout";
 import search, { getAllSentences } from "../lib/search";
+import Button from "../components/Button";
 
 function Post({ answer }) {
   return (
-    <>
+    <Layout justifyContent="flex-start">
       <Head>
         <title>{answer?.frase[0].text} tem crase? - temcrase.com</title>
       </Head>
-      <h1>{answer?.frase[0].text}</h1>
+      <h1>{answer?.frase[0].text} tem crase?</h1>
       <div className="resposta">{answer?.resposta.data.titulo[0].text}</div>
       <p>{answer?.explicacao[0].text}</p>
-    </>
+
+      <Button href="/">
+        <span>⟵</span> tire outras dúvidas sobre crase
+      </Button>
+    </Layout>
   );
 }
 

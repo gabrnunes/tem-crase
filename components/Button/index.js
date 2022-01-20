@@ -1,12 +1,14 @@
+import Link from "next/link";
+
 import styles from "./styles.module.css";
 
 export default function Button({ children, href, onClick }) {
   return (
     <>
       {href ? (
-        <a className={styles.button} href={href}>
-          {children}
-        </a>
+        <Link href={href}>
+          <a className={styles.button}>{children}</a>
+        </Link>
       ) : (
         <button className={styles.button} onClick={onClick}>
           {children}
