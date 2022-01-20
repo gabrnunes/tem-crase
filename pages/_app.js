@@ -26,7 +26,7 @@ function Temcrase({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>temcrase.com</title>
+        <title>temcrase.com - Tire suas dúvidas sobre crase</title>
       </Head>
       <Component {...pageProps} />
     </>
