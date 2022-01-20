@@ -1,29 +1,47 @@
-import { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router'
+import { useState } from "react";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function SearchInput({ text = '' }) {
+import Button from "../Button";
+
+import styles from "./styles.module.css";
+
+export default function SearchInput({ text = "" }) {
   const [searchText, setSearchText] = useState(text);
-  const router = useRouter()
+  const router = useRouter();
 
   function search(e) {
-    if(!searchText || searchText === text) {
-        return
+    if (!searchText || searchText === text) {
+      return;
     }
 
-    if (e.key && e.key !== 'Enter') {
-      return
+    if (e.key && e.key !== "Enter") {
+      return;
     }
 
     router.push({
-        pathname: `/busca`,
-        query: { s: searchText },
-    })
+      pathname: `/busca`,
+      query: { s: searchText },
+    });
   }
 
   return (
-    <>
-      <input value={searchText} onChange={(e) => setSearchText(e.target.value)} onKeyDown={search} type="search" />
-      <button onClick={search}>Pesquisar</button>
-    </>
-  )
+    <div className={styles.wrapper}>
+      <Link href="/">
+        <a>
+          <Image src="/logo.svg" width={48} height={48} />
+        </a>
+      </Link>
+      <input
+        value={searchText}
+        onChange={(e) => setSearchText(e.target.value)}
+        onKeyDown={search}
+        type="search"
+        className={styles.input}
+        placeholder="volta as aulas"
+      />
+      <Button onClick={search}>tem crase?</Button>
+    </div>
+  );
 }
