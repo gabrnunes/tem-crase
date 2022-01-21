@@ -1,13 +1,17 @@
-import { useRef, useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import Link from "next/link";
+import { useRef, useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import Button from "../button";
+import Button from '@components/button';
 
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 
-export default function SearchInput({ text = "" }) {
+type Props = {
+  text: string | string[];
+};
+
+export default function SearchInput({ text = '' }: Props) {
   const [searchText, setSearchText] = useState(text);
   const router = useRouter();
   const inputElement = useRef(null);
@@ -23,7 +27,7 @@ export default function SearchInput({ text = "" }) {
       return;
     }
 
-    if (e.key && e.key !== "Enter") {
+    if (e.key && e.key !== 'Enter') {
       return;
     }
 
@@ -49,7 +53,7 @@ export default function SearchInput({ text = "" }) {
         placeholder="volta as aulas"
         ref={inputElement}
       />
-      <Button onClick={search}>tem crase?</Button>
+      <Button onClick={(e) => search(e)}>tem crase?</Button>
     </div>
   );
 }

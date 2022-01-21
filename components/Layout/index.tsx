@@ -1,8 +1,14 @@
-import Link from "next/link";
+import type { ReactNode } from 'react';
+import Link from 'next/link';
 
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 
-export default function Layout({ children, justifyContent = "center" }) {
+type Props = {
+  children: ReactNode;
+  justifyContent: 'center' | 'flex-start';
+};
+
+export default function Layout({ children, justifyContent = 'center' }: Props) {
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>

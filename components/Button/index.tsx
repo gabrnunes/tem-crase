@@ -1,8 +1,15 @@
-import Link from "next/link";
+import type { ReactNode } from 'react';
+import Link from 'next/link';
 
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 
-export default function Button({ children, href, onClick }) {
+type Props = {
+  children: ReactNode;
+  href?: string;
+  onClick?: (e) => void;
+};
+
+export default function Button({ children, href, onClick }: Props) {
   return (
     <>
       {href ? (

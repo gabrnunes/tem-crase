@@ -1,9 +1,9 @@
-import React from "react";
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 
-import Layout from "../components/Layout";
-import search, { getAllSentences } from "../lib/search";
-import Button from "../components/Button";
+import Layout from '@components/layout';
+import Button from '@components/button';
+import search, { getAllSentences } from '@lib/search';
 
 function Post({ answer }) {
   return (

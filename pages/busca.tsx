@@ -1,10 +1,10 @@
-import React from "react";
-import { useRouter } from "next/router";
-import Head from "next/head";
+import React from 'react';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 
-import Layout from "../components/layout";
-import SearchInput from "../components/searchInput";
-import search from "../lib/search";
+import Layout from '@components/layout';
+import SearchInput from '@components/searchInput';
+import search from '@lib/search';
 
 export default function Busca({ answer, related, error }) {
   const router = useRouter();
@@ -56,7 +56,7 @@ export async function getServerSideProps({ query }) {
   const res = await search(query.s);
 
   if (!res.success) {
-    if (res.error.code === "not_found") {
+    if (res.error.code === 'not_found') {
       return {
         props: {
           related: res.related,

@@ -16,7 +16,9 @@
     "underscore.string": "^3.3.5"
   },
   "devDependencies": {
+    "@types/react": "^17.0.38",
     "eslint": "8.7.0",
-    "eslint-config-next": "12.0.8"
+    "eslint-config-next": "12.0.8",
+    "typescript": "^4.5.5"
   }
 }
