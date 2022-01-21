@@ -2,6 +2,13 @@
   display: flex;
   gap: var(--size-2x);
   align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    flex-direction: row;
+  }
 }
 
 .input {
