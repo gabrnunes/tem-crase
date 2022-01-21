@@ -57,13 +57,9 @@ export default function Layout({ children, justifyContent = 'center' }: Props) {
               </a>
             </li>
             <li>
-              <a
-                href="https://nubank.com.br/pagar/5kho2/YC0361rW2e"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                me pague um café
-              </a>
+              <Link href="/cafe">
+                <a>me pague um café</a>
+              </Link>
             </li>
             <li>
               <Link href="/sobre">
