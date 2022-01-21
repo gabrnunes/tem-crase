@@ -45,7 +45,7 @@ export default function SearchInput({ text = '' }: Props) {
   return (
     <div className={styles.wrapper}>
       <Link href="/">
-        <a>
+        <a className={styles.logo}>
           <Image src="/logo.svg" width={48} height={48} alt="temcrase.com" />
         </a>
       </Link>

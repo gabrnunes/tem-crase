@@ -15,6 +15,21 @@
   font-size: var(--size-3x);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.symbol {
+  margin-right: var(--size-1x);
+}
+
+@media (min-width: 600px) {
+  .symbol {
+    display: none;
+  }
+}
+
 .main {
   flex-grow: 1;
   display: flex;
@@ -24,6 +39,7 @@
 }
 
 .content {
+  width: 90%;
   max-width: 535px;
   margin: 0 auto;
 }
@@ -42,7 +58,16 @@
   margin: 0;
   display: flex;
   align-items: center;
-  gap: var(--size-6x);
+  gap: var(--size-3x);
+  margin: var(--size-6x) 0;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .nav {
+    flex-direction: row;
+    gap: var(--size-6x);
+  }
 }
 
 .nav a {

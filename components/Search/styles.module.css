@@ -3,11 +3,22 @@
   gap: var(--size-2x);
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
 @media (min-width: 600px) {
   .wrapper {
     flex-direction: row;
+  }
+}
+
+.logo {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    display: block;
   }
 }
 
@@ -18,9 +29,15 @@
   padding: var(--size-2x);
   font-size: 1rem;
   font-family: var(--font-family);
-  width: 20rem;
+  width: 100%;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
+}
+
+@media (min-width: 600px) {
+  .input {
+    width: 20rem;
+  }
 }
 
 .input:hover {
