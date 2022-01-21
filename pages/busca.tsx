@@ -4,6 +4,7 @@ import Head from 'next/head';
 
 import Layout from '@components/Layout/Layout';
 import SearchInput from '@components/Search/Search';
+import SearchResult from '@components/SearchResult/SearchResult';
 import search from '@lib/search';
 
 export default function Busca({ answer, related, error }) {
@@ -45,9 +46,11 @@ export default function Busca({ answer, related, error }) {
         <title>{answer?.frase[0].text} tem crase? - temcrase.com</title>
       </Head>
       <SearchInput text={s} />
-      <h1>{answer.frase[0].text}</h1>
-      <div className="resposta">{answer.resposta.data.titulo[0].text}</div>
-      <p>{answer.explicacao[0].text}</p>
+      <SearchResult
+        title={answer.frase[0].text}
+        answer={answer.resposta.data.titulo[0].text}
+        explanation={answer.explicacao[0].text}
+      />
     </Layout>
   );
 }

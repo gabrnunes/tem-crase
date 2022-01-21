@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Layout from '@components/Layout/Layout';
 import Button from '@components/Button/Button';
 import search, { getAllSentences } from '@lib/search';
+import SearchResult from '@components/SearchResult/SearchResult';
 
 function Post({ answer }) {
   return (
@@ -11,9 +12,13 @@ function Post({ answer }) {
       <Head>
         <title>{answer?.frase[0].text} tem crase? - temcrase.com</title>
       </Head>
-      <h1>{answer?.frase[0].text} tem crase?</h1>
-      <div className="resposta">{answer?.resposta.data.titulo[0].text}</div>
-      <p>{answer?.explicacao[0].text}</p>
+
+      <SearchResult
+        title={`${answer?.frase[0].text} tem crase?`}
+        answer={answer?.resposta.data.titulo[0].text}
+        size="big"
+        explanation={answer?.explicacao[0].text}
+      />
 
       <Button href="/">
         <span>⟵</span> tire outras dúvidas sobre crase

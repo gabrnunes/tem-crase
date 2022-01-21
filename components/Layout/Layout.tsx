@@ -35,7 +35,7 @@ export default function Layout({ children, justifyContent = 'center' }: Props) {
           <ul className={styles.nav}>
             <li>
               <Link href="/tudo">
-                <a>todos os termos</a>
+                <a>todas as frase</a>
               </Link>
             </li>
             <li>

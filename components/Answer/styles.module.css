@@ -1,0 +1,58 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.wrapper::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 0;
+}
+
+.answer {
+  color: var(--color-bg);
+  padding: 0.3rem var(--size-1x);
+  border-radius: var(--size-2x);
+  line-height: 1;
+}
+
+.big {
+  font-size: 1.25rem;
+  border-radius: 2.25rem;
+  padding: var(--size-1x) var(--size-3x);
+  box-shadow: 20px 0px 0px var(--color-bg);
+  position: relative;
+  z-index: 100;
+}
+
+@media (min-width: 600px) {
+  .big {
+    font-size: 2.25rem;
+  }
+}
+
+.yes {
+  background-color: var(--color-yes);
+}
+
+.no {
+  background-color: var(--color-no);
+}
+
+.maybe {
+  background-color: var(--color-maybe);
+}
+
+.dont-know {
+  background-color: var(--color-dont-know);
+}
+
+.follow-your-heart {
+  background-color: var(--color-follow-your-heart);
+}

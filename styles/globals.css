@@ -26,9 +26,12 @@
   --color-border-dark: #cccccc;
   --color-link: #9d9d9d;
   --color-text: #4d4d4d;
+
   --color-yes: #60d464;
   --color-no: #f15b5b;
   --color-maybe: #ff9e57;
+  --color-dont-know: #76baec;
+  --color-follow-your-heart: #d460c9;
 
   --size-1x: 0.5rem;
   --size-2x: 1rem;
@@ -56,6 +59,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-primary);
 }
 
 a {
