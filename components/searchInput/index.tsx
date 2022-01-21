@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Button from '@components/button';
+import Button from '@components/Button';
 
 import styles from './styles.module.css';
 
@@ -13,6 +13,7 @@ type Props = {
 
 export default function SearchInput({ text = '' }: Props) {
   const [searchText, setSearchText] = useState(text);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const inputElement = useRef(null);
 
@@ -20,7 +21,9 @@ export default function SearchInput({ text = '' }: Props) {
     if (inputElement.current) {
       inputElement.current.focus();
     }
-  }, []);
+
+    setIsLoading(false);
+  }, [searchText]);
 
   function search(e) {
     if (!searchText || searchText === text) {
@@ -30,6 +33,8 @@ export default function SearchInput({ text = '' }: Props) {
     if (e.key && e.key !== 'Enter') {
       return;
     }
+
+    setIsLoading(true);
 
     router.push({
       pathname: `/busca`,
@@ -53,7 +58,9 @@ export default function SearchInput({ text = '' }: Props) {
         placeholder="volta as aulas"
         ref={inputElement}
       />
-      <Button onClick={(e) => search(e)}>tem crase?</Button>
+      <Button onClick={(e) => search(e)} isLoading={isLoading}>
+        tem crase?
+      </Button>
     </div>
   );
 }

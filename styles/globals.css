@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "Helvetica";
-  src: url("/fonts/helvetica-regular.woff2") format("woff2"),
-    url("/fonts/helvetica-regular.woff") format("woff");
+  font-family: 'Helvetica';
+  src: url('/fonts/helvetica-regular.woff2') format('woff2'),
+    url('/fonts/helvetica-regular.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Helvetica";
-  src: url("/fonts/helvetica-bold.woff2") format("woff2"),
-    url("/fonts/helvetica-bold.woff") format("woff");
+  font-family: 'Helvetica';
+  src: url('/fonts/helvetica-bold.woff2') format('woff2'),
+    url('/fonts/helvetica-bold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -21,6 +21,7 @@
   --color-bg-dark: #f9f9f9;
   --color-primary: #000000;
   --color-primary-light: #2d2d2d;
+  --color-primary-lighter: #6d6d6d;
   --color-border: #dddddd;
   --color-border-dark: #cccccc;
   --color-link: #9d9d9d;
@@ -36,7 +37,7 @@
   --size-5x: 2.5rem;
   --size-6x: 3rem;
 
-  --font-family: "Helvetica", sans-serif;
+  --font-family: 'Helvetica', sans-serif;
 
   --border-radius: 0.625rem;
 }
