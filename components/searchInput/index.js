@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 
-import Button from "../Button";
+import Button from "../button";
 
 import styles from "./styles.module.css";
 
 export default function SearchInput({ text = "" }) {
   const [searchText, setSearchText] = useState(text);
   const router = useRouter();
+  const inputElement = useRef(null);
+
+  useEffect(() => {
+    if (inputElement.current) {
+      inputElement.current.focus();
+    }
+  }, []);
 
   function search(e) {
     if (!searchText || searchText === text) {
@@ -40,7 +47,7 @@ export default function SearchInput({ text = "" }) {
         type="search"
         className={styles.input}
         placeholder="volta as aulas"
-        autoFocus
+        ref={inputElement}
       />
       <Button onClick={search}>tem crase?</Button>
     </div>

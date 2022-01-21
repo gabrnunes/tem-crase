@@ -1,5 +1,5 @@
-import Layout from "../components/Layout";
-import SearchInput from "../components/SearchInput";
+import Layout from "../components/layout";
+import SearchInput from "../components/searchInput";
 
 export default function Home() {
   return (
