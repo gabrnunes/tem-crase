@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -7,9 +7,19 @@ import SearchInput from '@components/Search/Search';
 import SearchResult from '@components/SearchResult/SearchResult';
 import search from '@lib/search';
 
-export default function Busca({ answer, related, error }) {
+export default function Busca({ answer, related }) {
   const router = useRouter();
   const { s } = router.query;
+
+  useEffect(() => {
+    if (!answer) {
+      (window as any).goatcounter.count({
+        path: 'dont-know-sentence',
+        title: s,
+        event: true,
+      });
+    }
+  }, [answer, s]);
 
   if (!answer) {
     return (
@@ -19,17 +29,23 @@ export default function Busca({ answer, related, error }) {
         </Head>
         <SearchInput text={s} />
 
-        <h1>Não encontrado</h1>
+        <SearchResult
+          title={`${s}`}
+          answer="dont-know"
+          explanation="Eu ainda não tenho a resposta! Mas, fica na tranquilidade, nossos robôs já foram avisados da sua dúvida e vão analisá-la para colocar na lista para a próxima vez. Ou, se você mesmo descobrir a resposta, pode acessar o link 'ajude a melhorar' no rodapé."
+        />
 
         {related && related[0] && (
           <>
-            <h3>Você quis dizer:</h3>
+            <h3>Ou, talvez, você quis dizer:</h3>
 
             <ul>
               {related.map((rel, index) => {
                 return (
                   <li key={`related-${index}`}>
-                    <a href={rel.uid}>{rel.data.frase[0].text}</a>
+                    <a className="link" href={`/busca?s=${rel.uid}`}>
+                      {rel.data.frase[0].text}
+                    </a>
                   </li>
                 );
               })}
@@ -68,9 +84,7 @@ export async function getServerSideProps({ query }) {
     }
 
     return {
-      props: {
-        error: true,
-      },
+      notFound: true,
     };
   }
 
