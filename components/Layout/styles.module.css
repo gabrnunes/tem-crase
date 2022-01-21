@@ -31,11 +31,16 @@
 }
 
 .main {
-  flex-grow: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: var(--size-6x) 0;
+}
+
+@media (min-width: 600px) {
+  .main {
+    flex-grow: 1;
+  }
 }
 
 .content {
