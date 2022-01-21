@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Button from '@components/Button/Button';
+import Button from '@components/button/Button';
 
 import styles from './styles.module.css';
 
