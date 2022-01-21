@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
-import Layout from '@components/layout/Layout';
-import Button from '@components/button/Button';
+import Layout from '@components/Layout/Layout';
+import Button from '@components/Button/Button';
 import search, { getAllSentences } from '@lib/search';
 
 function Post({ answer }) {
