@@ -30,6 +30,11 @@ export default class CustomDocument extends Document {
             property="twitter:image"
             content="https://temcrase.com/card.png"
           />
+          <script
+            data-goatcounter="https://temcrase.goatcounter.com/count"
+            async
+            src="//gc.zgo.at/count.js"
+          ></script>
         </Head>
         <body>
           <script defer src="noflash.js" />
