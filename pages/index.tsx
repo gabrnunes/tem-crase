@@ -1,4 +1,4 @@
-import Layout from '@components/Wrapper/Wrapper';
+import Layout from '@components/Layout/Layout';
 import SearchInput from '@components/Search/Search';
 
 export default function Home() {

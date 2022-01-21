@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
-import Layout from '@components/Wrapper/Wrapper';
+import Layout from '@components/Layout/Layout';
 import SearchInput from '@components/Search/Search';
 import search from '@lib/search';
 
