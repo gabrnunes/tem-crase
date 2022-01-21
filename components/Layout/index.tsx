@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 
 type Props = {
   children: ReactNode;
-  justifyContent: 'center' | 'flex-start';
+  justifyContent?: 'center' | 'flex-start';
 };
 
 export default function Layout({ children, justifyContent = 'center' }: Props) {

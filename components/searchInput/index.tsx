@@ -8,7 +8,7 @@ import Button from '@components/button';
 import styles from './styles.module.css';
 
 type Props = {
-  text: string | string[];
+  text?: string | string[];
 };
 
 export default function SearchInput({ text = '' }: Props) {
