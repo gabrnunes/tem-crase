@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,13 +15,8 @@ export default function SearchInput({ text = '' }: Props) {
   const [searchText, setSearchText] = useState(text);
   const [isDisabled, setIsDisabled] = useState(false);
   const router = useRouter();
-  const inputElement = useRef(null);
 
   useEffect(() => {
-    if (inputElement.current) {
-      inputElement.current.focus();
-    }
-
     setIsDisabled(false);
   }, [searchText]);
 
@@ -56,7 +51,6 @@ export default function SearchInput({ text = '' }: Props) {
         type="search"
         className={styles.input}
         placeholder="volta as aulas"
-        ref={inputElement}
       />
       <Button onClick={(e) => search(e)} disabled={isDisabled}>
         tem crase?
