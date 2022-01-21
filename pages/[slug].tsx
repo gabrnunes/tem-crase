@@ -8,11 +8,10 @@ import SearchResult from '@components/SearchResult/SearchResult';
 
 function Post({ answer }) {
   return (
-    <Layout justifyContent="flex-start">
-      <Head>
-        <title>{answer?.frase[0].text} tem crase? - temcrase.com</title>
-      </Head>
-
+    <Layout
+      justifyContent="flex-start"
+      title={`${answer?.frase[0].text} tem crase?`}
+    >
       <SearchResult
         title={`${answer?.frase[0].text} tem crase?`}
         answer={answer?.resposta.data.titulo[0].text}

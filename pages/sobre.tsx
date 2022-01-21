@@ -6,10 +6,7 @@ import Link from 'next/link';
 
 export default function Sobre() {
   return (
-    <Layout justifyContent="flex-start">
-      <Head>
-        <title>Sobre - temcrase.com</title>
-      </Head>
+    <Layout justifyContent="flex-start" title="Sobre">
       <>
         <h1>A história do tem crase</h1>
         <p>

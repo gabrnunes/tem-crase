@@ -3,7 +3,7 @@ import SearchInput from '@components/Search/Search';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title="Tire suas dúvidas sobre crase">
       <SearchInput />
     </Layout>
   );

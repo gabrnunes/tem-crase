@@ -7,11 +7,7 @@ import AllSentences from '@components/AllSentences/AllSentences';
 
 export default function Tudo({ allSentences }) {
   return (
-    <Layout justifyContent="flex-start">
-      <Head>
-        <title>Frases que podem conter crase - temcrase.com</title>
-      </Head>
-
+    <Layout justifyContent="flex-start" title="Frases que podem conter crase">
       <AllSentences sentences={allSentences} />
     </Layout>
   );

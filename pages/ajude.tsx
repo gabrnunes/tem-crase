@@ -6,10 +6,7 @@ import Link from 'next/link';
 
 export default function Ajude() {
   return (
-    <Layout justifyContent="flex-start">
-      <Head>
-        <title>Ajude a gente! - temcrase.com</title>
-      </Head>
+    <Layout justifyContent="flex-start" title="Ajude a gente!">
       <>
         <h1>Ajude o tem crase a melhorar!</h1>
         <p>

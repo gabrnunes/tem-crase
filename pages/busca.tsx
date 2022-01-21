@@ -13,10 +13,7 @@ export default function Busca({ answer, related, error }) {
 
   if (!answer) {
     return (
-      <Layout justifyContent="flex-start">
-        <Head>
-          <title>Nenhum resultado encontrado - temcrase.com</title>
-        </Head>
+      <Layout justifyContent="flex-start" title="Nenhum resultado encontrado">
         <SearchInput text={s} />
 
         <h1>Não encontrado</h1>
@@ -41,10 +38,10 @@ export default function Busca({ answer, related, error }) {
   }
 
   return (
-    <Layout justifyContent="flex-start">
-      <Head>
-        <title>{answer?.frase[0].text} tem crase? - temcrase.com</title>
-      </Head>
+    <Layout
+      justifyContent="flex-start"
+      title={`${answer?.frase[0].text} tem crase?`}
+    >
       <SearchInput text={s} />
       <SearchResult
         title={answer.frase[0].text}

@@ -6,10 +6,7 @@ import Link from 'next/link';
 
 export default function Cafe() {
   return (
-    <Layout justifyContent="flex-start">
-      <Head>
-        <title>Me pague um café - temcrase.com</title>
-      </Head>
+    <Layout justifyContent="flex-start" title="Me pague um café">
       <>
         <h1>Me pague um café</h1>
         <p>
