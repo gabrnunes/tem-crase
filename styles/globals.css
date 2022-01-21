@@ -90,6 +90,31 @@ a {
   text-decoration: none;
 }
 
+.link {
+  color: var(--color-link);
+}
+
+.link:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 1.5em;
+}
+
+p {
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+h2 {
+  color: var(--color-text);
+  font-size: var(--size-2x);
+}
+
 * {
   box-sizing: border-box;
 }
