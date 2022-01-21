@@ -18,5 +18,5 @@
 }
 
 .active {
-  background: var(--color-bg-dark);
+  background: var(--color-border);
 }
