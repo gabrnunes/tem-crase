@@ -1,0 +1,22 @@
+.button {
+  border: 1px solid var(--color-border);
+  padding: var(--size-1x) var(--size-2x);
+  background-color: var(--color-bg);
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.button:first-child {
+  border-right: 0;
+  border-top-left-radius: var(--size-1x);
+  border-bottom-left-radius: var(--size-1x);
+}
+
+.button:last-child {
+  border-top-right-radius: var(--size-1x);
+  border-bottom-right-radius: var(--size-1x);
+}
+
+.active {
+  background: var(--color-bg-dark);
+}

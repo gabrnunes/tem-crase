@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import useDarkMode from 'use-dark-mode';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export default function SearchInput({ text = '' }: Props) {
+  const { value } = useDarkMode();
   const [searchText, setSearchText] = useState(text);
   const [isDisabled, setIsDisabled] = useState(false);
   const router = useRouter();
@@ -41,7 +43,12 @@ export default function SearchInput({ text = '' }: Props) {
     <div className={styles.wrapper}>
       <Link href="/">
         <a className={styles.logo}>
-          <Image src="/logo.svg" width={48} height={48} alt="temcrase.com" />
+          <Image
+            src={value ? `/logo-dark.svg` : `/logo.svg`}
+            width={48}
+            height={48}
+            alt="temcrase.com"
+          />
         </a>
       </Link>
       <input
