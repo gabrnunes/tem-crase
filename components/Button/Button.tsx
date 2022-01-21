@@ -7,10 +7,10 @@ type Props = {
   children: ReactNode;
   href?: string;
   onClick?: (e) => void;
-  isLoading?: boolean;
+  disabled?: boolean;
 };
 
-export default function Button({ children, href, onClick, isLoading }: Props) {
+export default function Button({ children, href, onClick, disabled }: Props) {
   return (
     <>
       {href ? (
@@ -18,11 +18,7 @@ export default function Button({ children, href, onClick, isLoading }: Props) {
           <a className={styles.button}>{children}</a>
         </Link>
       ) : (
-        <button
-          className={styles.button}
-          onClick={onClick}
-          disabled={isLoading}
-        >
+        <button className={styles.button} onClick={onClick} disabled={disabled}>
           {children}
         </button>
       )}

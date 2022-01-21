@@ -13,7 +13,7 @@ type Props = {
 
 export default function SearchInput({ text = '' }: Props) {
   const [searchText, setSearchText] = useState(text);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
   const router = useRouter();
   const inputElement = useRef(null);
 
@@ -22,7 +22,7 @@ export default function SearchInput({ text = '' }: Props) {
       inputElement.current.focus();
     }
 
-    setIsLoading(false);
+    setIsDisabled(false);
   }, [searchText]);
 
   function search(e) {
@@ -34,7 +34,7 @@ export default function SearchInput({ text = '' }: Props) {
       return;
     }
 
-    setIsLoading(true);
+    setIsDisabled(true);
 
     router.push({
       pathname: `/busca`,
@@ -58,7 +58,7 @@ export default function SearchInput({ text = '' }: Props) {
         placeholder="volta as aulas"
         ref={inputElement}
       />
-      <Button onClick={(e) => search(e)} isLoading={isLoading}>
+      <Button onClick={(e) => search(e)} disabled={isDisabled}>
         tem crase?
       </Button>
     </div>
