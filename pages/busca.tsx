@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
+import { slugify } from 'underscore.string';
 
 import Layout from '@components/Layout/Layout';
 import SearchInput from '@components/Search/Search';
@@ -13,8 +13,10 @@ export default function Busca({ answer, related }) {
 
   useEffect(() => {
     if (!answer) {
+      const slug = slugify(s);
+
       (window as any).goatcounter.count({
-        path: 'dont-know-sentence',
+        path: `dont-know/${slug}`,
         title: s,
         event: true,
       });
