@@ -9,7 +9,7 @@ const DarkModeToggle = () => {
   const { disable, enable, value } = useDarkMode();
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <button
         className={clsx(styles.button, !value && styles.active)}
         type="button"
@@ -34,7 +34,7 @@ const DarkModeToggle = () => {
           alt="Ativar o modo noturno"
         />
       </button>
-    </>
+    </div>
   );
 };
 

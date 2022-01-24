@@ -1,3 +1,7 @@
+.wrapper {
+  display: inline-flex;
+}
+
 .button {
   border: 1px solid var(--color-border);
   padding: var(--size-1x) var(--size-2x);
