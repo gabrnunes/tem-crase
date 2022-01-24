@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { slugify } from 'underscore.string';
+import { GCEvent } from 'next-goatcounter';
 
 import Layout from '@components/Layout/Layout';
 import SearchInput from '@components/Search/Search';
@@ -15,11 +16,7 @@ export default function Busca({ answer, related }) {
     if (!answer) {
       const slug = slugify(s);
 
-      (window as any).goatcounter.count({
-        path: `dont-know/${slug}`,
-        title: s,
-        event: true,
-      });
+      GCEvent(`dont-know/${slug}`, s);
     }
   }, [answer, s]);
 

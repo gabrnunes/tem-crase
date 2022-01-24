@@ -53,11 +53,6 @@ export default function Layout({
           property="twitter:image"
           content="https://temcrase.com/card.png"
         />
-        <script
-          data-goatcounter="https://temcrase.goatcounter.com/count"
-          async
-          src="//gc.zgo.at/count.js"
-        ></script>
       </Head>
       <div className={styles.wrapper}>
         <header className={styles.header}>
