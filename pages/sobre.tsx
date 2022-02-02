@@ -51,6 +51,26 @@ export default function Sobre() {
           </Link>
           !
         </p>
+        <h3>O site já contou com a ajuda de algumas pessoas</h3>
+        <p>
+          Muito obrigado! Se você ajudou, mas seu nome não está na lista, pode
+          me mandar um e-mail em gabriel@onionrings.com.br. Pode mandar um
+          e-mail também caso queira vincular algum link no seu nome!
+        </p>
+        <ul>
+          <li>
+            Mônica Guerretta: Ela criou o projeto{' '}
+            <a
+              href="https://www.instagram.com/qualeocerto/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              {'"'}Qual é o certo?{'"'}
+            </a>{' '}
+            e ajudou em muitas respostas que temos aqui.
+          </li>
+        </ul>
       </>
     </Layout>
   );
