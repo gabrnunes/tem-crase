@@ -1,6 +1,7 @@
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import Head from 'next/head';
+import { GCScript } from 'next-goatcounter';
 
 import '../styles/nprogress.css';
 import '../styles/globals.css';
@@ -25,9 +26,7 @@ function Temcrase({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
-        <title>temcrase.com - Tire suas dúvidas sobre crase</title>
-      </Head>
+      <GCScript siteUrl={'https://temcrase.goatcounter.com/count'} />
       <Component {...pageProps} />
     </>
   );
