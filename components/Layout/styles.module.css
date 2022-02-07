@@ -23,12 +23,6 @@
   margin-right: var(--size-1x);
 }
 
-@media (min-width: 600px) {
-  .symbol {
-    display: none;
-  }
-}
-
 .main {
   display: flex;
   align-items: center;

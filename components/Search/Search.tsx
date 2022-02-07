@@ -41,16 +41,6 @@ export default function SearchInput({ text = '' }: Props) {
 
   return (
     <div className={styles.wrapper}>
-      <Link href="/">
-        <a className={styles.logo}>
-          <Image
-            src={value ? `/logo-dark.svg` : `/logo.svg`}
-            width={48}
-            height={48}
-            alt="temcrase.com"
-          />
-        </a>
-      </Link>
       <input
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
