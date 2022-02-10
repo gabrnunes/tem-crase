@@ -55,7 +55,7 @@ export default function Ajude() {
           >
             abrir um {`\"problema\"`} (issue)
           </a>{' '}
-          no nosso GitHub, para que alguém tente resolver. Fique a vontade,
+          no nosso GitHub, para que alguém tente resolver. Fique à vontade,
           também, para fazer qualquer outro comentário através do nosso projeto
           no GitHub.
         </p>
