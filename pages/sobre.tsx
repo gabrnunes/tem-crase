@@ -45,7 +45,7 @@ export default function Sobre() {
           entusiasta de design.
         </p>
         <p>
-          Espero que você curta o projeto e sinta-se a vontade para{' '}
+          Espero que você curta o projeto e sinta-se à vontade para{' '}
           <Link href="/ajude">
             <a className="link">ajudar a melhorá-lo</a>
           </Link>
