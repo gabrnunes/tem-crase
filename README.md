@@ -9,3 +9,20 @@ A ideia inicial era construir uma inteligência artificial que aprende com o tem
 O projeto foi criado e é mantido por [Gabriel Nunes](https://github.com/gabrnunes). Trabalho como desenvolvedor de software, organizo uns eventos e sou entusiasta de design.
 
 Pull requests são bem-vindas! :)
+
+
+----
+
+# Desenvolvendo
+
+Para rodar o servidor de desenvolvimento local, veja os
+exemplos abaixo:
+
+```bash
+git https://github.com/gabrnunes/tem-crase.git
+cd tem-crase
+make setup
+make dev
+```
+
+Agora abra seu navegador em http://localhost:3000
