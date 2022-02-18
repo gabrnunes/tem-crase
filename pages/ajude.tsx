@@ -16,7 +16,7 @@ export default function Ajude() {
             <a className="link">foi criado por uma pessoa só</a>
           </Link>
           {', '}
-          que mantém o site no ar e faz melhorias no mesmo. Você pode ajudar o
+          que mantém o site no ar e faz melhorias nele. Você pode ajudar o
           tem crase de várias formas:
         </p>
         <hr />
