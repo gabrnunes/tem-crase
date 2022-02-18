@@ -46,7 +46,7 @@
   border-top: 1px solid var(--color-border);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   .footer {
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@
   flex-direction: column;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .nav {
     width: 100%;
     flex-direction: row;
