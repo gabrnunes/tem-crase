@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 
 import Layout from '@components/Layout/Layout';
 import Link from 'next/link';
@@ -69,6 +68,29 @@ export default function Sobre() {
               {'"'}Qual é o certo?{'"'}
             </a>{' '}
             e ajudou em muitas respostas que temos aqui.
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/dalvacorrea/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              Dalva Corrêa
+            </a>{' '}
+            que compartilhou uma planilha com vários termos que causam dúvidas
+            de crase
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/taniadarc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              Tânia d'Arc
+            </a>{' '}
+            que criou o texto da página {'"'}O que é crase?{'"'}
           </li>
         </ul>
       </>
