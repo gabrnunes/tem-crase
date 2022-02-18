@@ -16,16 +16,16 @@ export default function OQueECrase() {
         </p>
         <p>
           Só acontece em palavras femininas, pois o o artigo definido masculino
-          é {'"'}o{'"'}, então quando se junta com a preposição {'"'}a{'"'}{' '}
-          fica: ao.
+          é &#8222;o&#8222;, então quando se junta com a preposição
+          &#8222;a&#8222; fica: ao.
         </p>
         <p>
-          Por isso que um {'"'}truque{'"'} bastante usado é tentar passar para o
-          masculino. Se no masculino for {'"'}ao{'"'}, então no feminino fica{' '}
-          {'"'}à{'"'}. Se no masculino continuar sendo {'"'}a{'"'}, então no
-          feminino também. Exceto em casos facultativos, em que se usa o acento
-          grave para diferenciar o uso da preposição em relação ao uso do
-          artigo.
+          Por isso que um &#8222;truque&#8222; bastante usado é tentar passar
+          para o masculino. Se no masculino for &#8222;ao&#8222;, então no
+          feminino fica &#8222;à&#8222;. Se no masculino continuar sendo
+          &#8222;a&#8222;, então no feminino também. Exceto em casos
+          facultativos, em que se usa o acento grave para diferenciar o uso da
+          preposição em relação ao uso do artigo.
         </p>
         <p>
           Ex:
@@ -35,7 +35,7 @@ export default function OQueECrase() {
           </ul>
         </p>
         <p>
-          <strong>Texto enviado por Tânia d'Arc.</strong>
+          <strong>Texto enviado por Tânia d&apos;Arc.</strong>
         </p>
       </>
     </Layout>

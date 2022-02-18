@@ -9,10 +9,10 @@ export default function Sobre() {
       <>
         <h1>A história do tem crase</h1>
         <p>
-          O site surgiu depois de inumeras pesquisas na internet do tipo {'"'}
-          volta as aulas tem crase?{'"'}. E encontrar respostas gigantes que
-          explicavam todas as regras da crase não respondiam apenas {'"'}NÃO!
-          {'"'}
+          O site surgiu depois de inumeras pesquisas na internet do tipo &#8222;
+          volta as aulas tem crase?&#8222;. E encontrar respostas gigantes que
+          explicavam todas as regras da crase não respondiam apenas &#8222;NÃO!
+          &#8222;
         </p>
         <p>
           A ideia inicial era construir uma inteligência artificial que aprende
@@ -65,7 +65,7 @@ export default function Sobre() {
               rel="noopener noreferrer"
               className="link"
             >
-              {'"'}Qual é o certo?{'"'}
+              &#8222;Qual é o certo?&#8222;
             </a>{' '}
             e ajudou em muitas respostas que temos aqui.
           </li>
@@ -88,9 +88,9 @@ export default function Sobre() {
               rel="noopener noreferrer"
               className="link"
             >
-              Tânia d'Arc
+              Tânia d&apos;Arc
             </a>{' '}
-            que criou o texto da página {'"'}O que é crase?{'"'}
+            que criou o texto da página &#8222;O que é crase?&#8222;
           </li>
         </ul>
       </>
