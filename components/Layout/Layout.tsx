@@ -80,6 +80,11 @@ export default function Layout({
           <nav>
             <ul className={styles.nav}>
               <li>
+                <Link href="/o-que-e-crase">
+                  <a>o que é crase?</a>
+                </Link>
+              </li>
+              <li>
                 <Link href="/tudo">
                   <a>todas as frases</a>
                 </Link>
