@@ -40,6 +40,7 @@
   --color-link: #9d9d9d;
   --color-text: #4d4d4d;
   --color-placeholder: #d7d7d7;
+  --color-error: #f15b5b;
 
   --color-yes: #60d464;
   --color-no: #f15b5b;
@@ -59,6 +60,7 @@
   --color-link: #7a7a7a;
   --color-text: #d4d4d4;
   --color-placeholder: #525252;
+  --color-error: #f15b5b;
 
   --color-yes: #60d464;
   --color-no: #f15b5b;

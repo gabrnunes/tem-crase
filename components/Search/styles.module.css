@@ -1,4 +1,8 @@
 .wrapper {
+  position: relative;
+}
+
+.searchInput {
   display: flex;
   gap: var(--size-2x);
   align-items: center;
@@ -7,7 +11,7 @@
 }
 
 @media (min-width: 600px) {
-  .wrapper {
+  .searchInput {
     flex-direction: row;
   }
 }
@@ -42,6 +46,10 @@
   }
 }
 
+.error {
+  border:1px solid var(--color-error);
+}
+
 .input:hover {
   border: 1px solid var(--color-border-dark);
   transition: all 0.2s ease-in-out;
@@ -52,4 +60,20 @@
   background-color: var(--color-bg-dark);
   outline: none;
   transition: all 0.2s ease-in-out;
+}
+
+.errorMessage {
+  position: absolute;
+  top: -35%;
+  left: 0;
+  background-color: var(--color-bg-dark);
+  font-size: 0.85rem;
+  padding: var(--size-1x) var(--size-2x);
+  border-radius: var(--size-2x);
+}
+
+@media (min-width: 600px) {
+  .errorMessage {
+    top: 110%;
+  }
 }
