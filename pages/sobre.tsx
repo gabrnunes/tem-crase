@@ -9,10 +9,8 @@ export default function Sobre() {
       <>
         <h1>A história do tem crase</h1>
         <p>
-          O site surgiu depois de inumeras pesquisas na internet do tipo &quot;
-          volta as aulas tem crase?&quot;. E encontrar respostas gigantes que
-          explicavam todas as regras da crase não respondiam apenas &quot;NÃO!
-          &quot;
+          O site surgiu depois de inumeras pesquisas na internet do tipo &quot;volta as aulas tem crase?&quot;. E encontrar respostas gigantes que
+          explicavam todas as regras da crase não respondiam apenas &quot;NÃO!&quot;
         </p>
         <p>
           A ideia inicial era construir uma inteligência artificial que aprende
