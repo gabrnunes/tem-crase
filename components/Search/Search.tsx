@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, KeyboardEvent } from 'react';
 import { useRouter } from 'next/router';
-import useDarkMode from 'use-dark-mode';
-import Image from 'next/image';
-import Link from 'next/link';
+import cn from 'classnames';
+import { slugify } from 'underscore.string';
 
 import Button from '@components/Button/Button';
 
@@ -13,21 +12,34 @@ type Props = {
 };
 
 export default function SearchInput({ text = '' }: Props) {
-  const { value } = useDarkMode();
   const [searchText, setSearchText] = useState(text);
   const [isDisabled, setIsDisabled] = useState(false);
+  const [error, setError] = useState('');
   const router = useRouter();
 
   useEffect(() => {
     setIsDisabled(false);
   }, [searchText]);
 
-  function search(e) {
+  function handleSarchChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setSearchText(e.target.value);
+    setError('');
+  }
+
+  function search(e: KeyboardEvent<HTMLInputElement>) {
     if (!searchText || searchText === text) {
       return;
     }
 
     if (e.key && e.key !== 'Enter') {
+      return;
+    }
+
+    const slug = slugify(searchText);
+    const regex = new RegExp(/\ba\b|\bas\b/g);
+    
+    if(!regex.test(slug)) {
+      setError('A busca deve conter a palavra "a" ou "as"');
       return;
     }
 
@@ -41,17 +53,20 @@ export default function SearchInput({ text = '' }: Props) {
 
   return (
     <div className={styles.wrapper}>
-      <input
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-        onKeyDown={search}
-        type="search"
-        className={styles.input}
-        placeholder="volta as aulas"
-      />
-      <Button onClick={(e) => search(e)} disabled={isDisabled}>
-        tem crase?
-      </Button>
+      <div className={styles.searchInput}>
+        <input
+          value={searchText}
+          onChange={(e) => handleSarchChange(e)}
+          onKeyDown={(e) => search(e)}
+          type="search"
+          className={cn([styles.input, { [styles.error]: error !== '' }])}
+          placeholder="volta as aulas"
+        />
+        <Button onClick={(e) => search(e)} disabled={isDisabled}>
+          tem crase?
+        </Button>
+      </div>
+      {error !== '' && <div className={styles.errorMessage}>{error}</div>}
     </div>
   );
 }
