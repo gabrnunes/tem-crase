@@ -16,14 +16,14 @@ export default function OQueECrase() {
         </p>
         <p>
           Só acontece em palavras femininas, pois o o artigo definido masculino
-          é &#8222;o&#8222;, então quando se junta com a preposição
-          &#8222;a&#8222; fica: ao.
+          é &quot;o&quot;, então quando se junta com a preposição
+          &quot;a&quot; fica: ao.
         </p>
         <p>
-          Por isso que um &#8222;truque&#8222; bastante usado é tentar passar
-          para o masculino. Se no masculino for &#8222;ao&#8222;, então no
-          feminino fica &#8222;à&#8222;. Se no masculino continuar sendo
-          &#8222;a&#8222;, então no feminino também. Exceto em casos
+          Por isso que um &quot;truque&quot; bastante usado é tentar passar
+          para o masculino. Se no masculino for &quot;ao&quot;, então no
+          feminino fica &quot;à&quot;. Se no masculino continuar sendo
+          &quot;a&quot;, então no feminino também. Exceto em casos
           facultativos, em que se usa o acento grave para diferenciar o uso da
           preposição em relação ao uso do artigo.
         </p>
