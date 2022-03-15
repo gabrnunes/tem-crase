@@ -15,7 +15,7 @@ function Post({ answer }) {
         title={`${answer?.frase[0].text} tem crase?`}
         answer={answer?.resposta.data.titulo[0].text}
         size="big"
-        explanation={answer?.explicacao[0].text}
+        explanation={answer?.explicacao[0]?.text}
       />
 
       <Button href="/">
