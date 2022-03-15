@@ -85,8 +85,8 @@ export default function Layout({
                 </Link>
               </li>
               <li>
-                <Link href="/tudo">
-                  <a>todas as frases</a>
+                <Link href="/dicionario">
+                  <a>dicionário</a>
                 </Link>
               </li>
               <li>

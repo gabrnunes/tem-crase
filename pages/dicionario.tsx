@@ -5,9 +5,12 @@ import Layout from '@components/Layout/Layout';
 import { getAllSentences } from '@lib/search';
 import AllSentences from '@components/AllSentences/AllSentences';
 
-export default function Tudo({ allSentences }) {
+export default function Dicionario({ allSentences }) {
   return (
-    <Layout justifyContent="flex-start" title="Frases que podem conter crase">
+    <Layout
+      justifyContent="flex-start"
+      title="Dicionário de frases que podem conter crase"
+    >
       <AllSentences sentences={allSentences} />
     </Layout>
   );
