@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
 import Answear from '@components/Answer/Answer';
+import NeedsExplanation from './NeedsExplanation';
 import { Answer } from '@lib/types';
 
 import styles from './styles.module.css';
@@ -9,7 +10,7 @@ type Props = {
   title: string;
   answer: Answer;
   size?: 'normal' | 'big';
-  explanation: string;
+  explanation?: string;
 };
 
 export default function SearchResult({
@@ -38,7 +39,11 @@ export default function SearchResult({
         </h1>
         <Answear answer={answer} size={size} />
       </header>
-      <p className={styles.explanation}>{explanation}</p>
+      {explanation ? (
+        <p className={styles.explanation}>{explanation}</p>
+      ) : (
+        <NeedsExplanation />
+      )}
     </section>
   );
 }
