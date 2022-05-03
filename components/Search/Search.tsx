@@ -37,8 +37,8 @@ export default function SearchInput({ text = '' }: Props) {
 
     const slug = slugify(searchText);
     const regex = new RegExp(/\ba\b|\bas\b/g);
-    
-    if(!regex.test(slug)) {
+
+    if (!regex.test(slug)) {
       setError('A busca deve conter a palavra "a" ou "as"');
       return;
     }
@@ -60,7 +60,7 @@ export default function SearchInput({ text = '' }: Props) {
           onKeyDown={(e) => search(e)}
           type="search"
           className={cn([styles.input, { [styles.error]: error !== '' }])}
-          placeholder="volta as aulas"
+          placeholder="digite um termo"
         />
         <Button onClick={(e) => search(e)} disabled={isDisabled}>
           tem crase?
