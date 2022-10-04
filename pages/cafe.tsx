@@ -12,7 +12,7 @@ export default function Cafe() {
         <p>
           O <strong>temcrase.com</strong> é um projeto open-source{' '}
           <Link href="/sobre">
-            <a className="link">criado por uma pessoa só</a>
+          <strong> <a className="link">criado por uma pessoa só</a></strong>
           </Link>
           {', '}
           que mantém o site no ar e faz melhorias no mesmo. Ele sempre será
@@ -23,7 +23,7 @@ export default function Cafe() {
         <h2>Se você quer me agradecer de alguma forma, faz um Pix</h2>
         <p>
           Sinta-se a vontade para{' '}
-          <a
+          <strong><a
             className="link"
             href="https://nubank.com.br/pagar/5kho2/YC0361rW2e"
             target="_blank"
@@ -31,7 +31,7 @@ export default function Cafe() {
           >
             fazer um Pix de qualquer valor
           </a>
-          {'! '}
+          {'! '}</strong>
           Manter o projeto no ar, dá trabalho e isso vai me incentivar a
           mantê-lo sempre funcionando.
         </p>

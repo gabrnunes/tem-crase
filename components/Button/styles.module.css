@@ -17,6 +17,6 @@
 }
 
 .button:hover {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary-lighter);
   transition: background-color 0.2s ease-in-out;
 }

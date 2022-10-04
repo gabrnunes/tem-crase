@@ -21,73 +21,73 @@ export default function Sobre() {
         </p>
         <p>
           O projeto foi criado por{' '}
-          <a
+          <strong><a
             href="https://gnun.es"
             target="_blank"
             rel="noopener noreferrer"
             className="link"
           >
             Gabriel Nunes
-          </a>{' '}
+          </a>{' '}</strong>
           (no Twitter sou o{' '}
-          <a
+          <strong><a
             href="https://twitter.com/nunesgabriel"
             target="_blank"
             rel="noopener noreferrer"
             className="link"
           >
             @nunesgabriel
-          </a>
+          </a></strong>
           ). Trabalho como desenvolvedor de software, organizo uns eventos e sou
           entusiasta de design.
         </p>
         <p>
           Espero que você curta o projeto e sinta-se à vontade para{' '}
           <Link href="/ajude">
-            <a className="link">ajudar a melhorá-lo</a>
+          <strong> <a className="link">ajudar a melhorá-lo</a></strong>
           </Link>
           !
         </p>
         <h3>O site já contou com a ajuda de algumas pessoas</h3>
         <p>
           Muito obrigado! Se você ajudou, mas seu nome não está na lista, pode
-          me mandar um e-mail em gabriel@onionrings.com.br. Pode mandar um
+          me mandar um e-mail em <strong>gabriel@onionrings.com.br</strong>. Pode mandar um
           e-mail também caso queira vincular algum link no seu nome!
         </p>
         <ul>
           <li>
             Mônica Guerretta: Ela criou o projeto{' '}
-            <a
+            <strong> <a
               href="https://www.instagram.com/qualeocerto/"
               target="_blank"
               rel="noopener noreferrer"
               className="link"
             >
               &quot;Qual é o certo?&quot;
-            </a>{' '}
+            </a>{' '}</strong>
             e ajudou em muitas respostas que temos aqui.
           </li>
           <li>
-            <a
+          <strong><a
               href="https://www.linkedin.com/in/dalvacorrea/"
               target="_blank"
               rel="noopener noreferrer"
               className="link"
             >
               Dalva Corrêa
-            </a>{' '}
+            </a>{' '}</strong>
             que compartilhou uma planilha com vários termos que causam dúvidas
             de crase
           </li>
           <li>
-            <a
+          <strong><a
               href="https://www.linkedin.com/in/taniadarc/"
               target="_blank"
               rel="noopener noreferrer"
               className="link"
             >
               Tânia d&apos;Arc
-            </a>{' '}
+            </a>{' '}</strong>
             que criou o texto da página &quot;O que é crase?&quot;
           </li>
         </ul>
