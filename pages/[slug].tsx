@@ -5,6 +5,7 @@ import Button from '@components/Button/Button';
 import search, { getAllSentences } from '@lib/search';
 import SearchResult from '@components/SearchResult/SearchResult';
 import { useRouter } from 'next/router'
+import ShareWithFriends from '@components/ShareWithFriends';
 
 function Post({ answer }) {
   const router = useRouter();
@@ -32,6 +33,8 @@ function Post({ answer }) {
       <Button href="/">
         <span>⟵</span> tire outras dúvidas sobre crase
       </Button>
+
+      <ShareWithFriends />
     </Layout>
   );
 }

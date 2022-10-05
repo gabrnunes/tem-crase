@@ -1,0 +1,14 @@
+.container{
+    background: transparent;
+    border:none;
+}
+
+.container svg{
+    fill: var(--color-primary);
+    width: 100%;
+    height: 100%;
+}
+
+.container:hover{
+    cursor: pointer;
+}
