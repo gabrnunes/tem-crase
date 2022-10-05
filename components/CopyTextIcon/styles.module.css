@@ -7,8 +7,6 @@
     fill: var(--color-primary);
     width: 100%;
     height: 100%;
-}
-
-.container:hover{
-    cursor: pointer;
+    max-width: var(--size-4x);
+    max-height: var(--size-4x);
 }
