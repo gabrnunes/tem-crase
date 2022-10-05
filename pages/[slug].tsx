@@ -4,8 +4,19 @@ import Layout from '@components/Layout/Layout';
 import Button from '@components/Button/Button';
 import search, { getAllSentences } from '@lib/search';
 import SearchResult from '@components/SearchResult/SearchResult';
+import { useRouter } from 'next/router'
 
 function Post({ answer }) {
+  const router = useRouter();
+
+  if(router.isFallback){
+    return <Layout
+      title="Procurando.."
+    >
+      <h2>Procurando em nosso banco de dados...</h2>
+    </Layout>
+  }
+
   return (
     <Layout
       justifyContent="flex-start"
