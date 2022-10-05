@@ -5,6 +5,16 @@ import styles from './styles.module.css';
 
 export default function ShareWithFriends(){
     const [url, setUrl] = useState('');
+    const [copied, setCopied] = useState(false);
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(url);
+        setCopied(true);
+        setTimeout(() => {
+            setCopied(false);
+        }, 3000);
+    };
+
 
     useEffect(() => {
         setUrl(window.location.href);
@@ -13,10 +23,10 @@ export default function ShareWithFriends(){
     return (
         <div className={styles.container}>
             <h2>Compartilhe com seus amigos</h2>
-            <div className={styles['copy-container']}>
+            <button className={styles['copy-container']} onClick={copyToClipboard}>
                 <span>{url}</span>
-                <CopyTextIcon text={url} />
-            </div>
+                <CopyTextIcon text={url} isCopied={copied} />
+            </button>
         </div>
     )
 }

@@ -5,25 +5,16 @@ import styles from "./styles.module.css";
 
 interface CopyTextIconProps {
     text: string;
+    isCopied: boolean;
 }
 
-export default function CopyTextIcon({ text }: CopyTextIconProps) {
-    const [copied, setCopied] = useState(false);
-
-    const copyToClipboard = () => {
-        navigator.clipboard.writeText(text);
-        setCopied(true);
-        setTimeout(() => {
-            setCopied(false);
-        }, 3000);
-    };
-
+export default function CopyTextIcon({ text, isCopied }: CopyTextIconProps) {
     return (
         <button className={styles.container}>
-            {copied ? (
+            {isCopied ? (
                 <MdCheck size={24} />
             ) : (
-                <MdContentCopy onClick={copyToClipboard} size={24} />
+                <MdContentCopy size={24} />
             )}
         </button>
     )
