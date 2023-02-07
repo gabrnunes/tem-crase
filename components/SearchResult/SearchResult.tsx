@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
 import Answear from '@components/Answer/Answer';
+import Ad from '@components/Ad/Ad';
 import NeedsExplanation from './NeedsExplanation';
 import { Answer } from '@lib/types';
 
@@ -44,6 +45,7 @@ export default function SearchResult({
       ) : (
         <NeedsExplanation />
       )}
+      <Ad />
     </section>
   );
 }

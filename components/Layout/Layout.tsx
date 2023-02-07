@@ -104,11 +104,6 @@ export default function Layout({
                 </a>
               </li>
               <li>
-                <Link href="/cafe">
-                  <a>me pague um café</a>
-                </Link>
-              </li>
-              <li>
                 <Link href="/sobre">
                   <a>sobre</a>
                 </Link>

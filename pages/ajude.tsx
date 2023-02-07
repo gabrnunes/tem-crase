@@ -10,8 +10,7 @@ export default function Ajude() {
       <>
         <h1>Ajude o tem crase a melhorar!</h1>
         <p>
-          O <strong>temcrase.com</strong> é um projeto open-source e sem fins
-          lucrativos. Ele{' '}
+          O <strong>temcrase.com</strong> é um projeto aberto. Ele{' '}
           <Link href="/sobre">
           <strong><a className="link">foi criado por uma pessoa só</a></strong>
           </Link>
@@ -58,18 +57,6 @@ export default function Ajude() {
           no nosso GitHub, para que alguém tente resolver. Fique à vontade,
           também, para fazer qualquer outro comentário através do nosso projeto
           no GitHub.
-        </p>
-        <h2>Me pagando um café</h2>
-        <p>
-          Por enquanto, o custo para manter o projeto no ar não é alto. Ele é
-          hospedado de forma gratuita na Vercel e pago apenas a renovação anual
-          do domínio (R$ 40). Mas, eu (Gabriel) acabo gastando horas de trabalho
-          para desenvolver o site, layout e outras melhorias. Então, se você
-          sentir-se confortável,{' '}
-          <Link href="/cafe">
-          <strong><a className="link">pode fazer um Pix</a></strong>
-          </Link>{' '}
-          de qualquer valor como agradecimento!
         </p>
       </>
     </Layout>

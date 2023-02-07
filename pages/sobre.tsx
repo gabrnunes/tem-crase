@@ -22,7 +22,7 @@ export default function Sobre() {
         <p>
           O projeto foi criado por{' '}
           <strong><a
-            href="https://gnun.es"
+            href="https://nunesgabriel.com.br"
             target="_blank"
             rel="noopener noreferrer"
             className="link"
