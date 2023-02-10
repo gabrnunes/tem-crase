@@ -8,7 +8,6 @@ export default function Home() {
     <Layout title="Tem crase?">
       <SearchInput />
       <MostSearched />
-      <Ad />
     </Layout>
   );
 }
