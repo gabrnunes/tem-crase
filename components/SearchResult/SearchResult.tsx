@@ -40,12 +40,12 @@ export default function SearchResult({
         </h1>
         <Answear answer={answer} size={size} />
       </header>
+      <Ad />
       {explanation ? (
         <p className={styles.explanation}>{explanation}</p>
       ) : (
         <NeedsExplanation />
       )}
-      <Ad />
     </section>
   );
 }
